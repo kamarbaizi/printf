@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-
+#define UNUSED_VAR   __attribute__((unused))
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
