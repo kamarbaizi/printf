@@ -84,7 +84,7 @@ return (write(1, str, length));
   * @size: Size specifier
   * Return: Number of chars printed
   */
-UNUSED_VAR int print_percent(va_list types, char buffer[], int flags,
+int print_percent(va_list types, char buffer[], int flags,
 	int width, int precision, int size) __attribute__((unused));
 {
 	UNUSED(types);
@@ -106,7 +106,7 @@ UNUSED_VAR int print_percent(va_list types, char buffer[], int flags,
  * @size: Size specifier
  * Return: Number of chars printed
  */
-UNUSED_VAR int print_int(va_list types, char buffer[], int flags,
+int print_int(va_list types, char buffer[], int flags,
 	int width, int precision, int size) __attribute__((unused));
 {
 	int i = BUFF_SIZE - 2;
@@ -147,7 +147,7 @@ return (write_number(is_negative, i, buffer, flags, width, precision, size));
  * @size: Size specifier
  * Return: Number of chars printed
  */
-UNUSED_VAR int print_binary(va_list types, char buffer[], int flags,
+int print_binary(va_list types, char buffer[], int flags,
 	int width, int precision, int size) __attribute__((unused));
 {
 	unsigned int n, m, i, sum;
