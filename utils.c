@@ -79,7 +79,7 @@ long int convert_size_unsgnd(unsigned long int num, int size)
 	else if (size == S_SHORT)
 		return ((unsigned short)num);
 
-	return ((unsignd int)num);
+	return ((unsigned int)num);
 }
 
 
