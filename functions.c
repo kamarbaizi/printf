@@ -35,14 +35,14 @@ int print_string(va_list types, char buffer[], int flags,
 	int length = 0, i;
 	char *str = va_arg(types, char *);
 
-	USUSED(buffer);
-	USUSED(flags);
-	USUSED(width);
-	USUSED(precision);
-	USUSED(size);
+	UNUSED(buffer);
+	UNUSED(flags);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
 	if (str == NULL)
 {
-	str = "(null)"
+	str = "(null)";
 	if (precision >= 6)
 	str = "      ";
 
@@ -84,7 +84,7 @@ return (write(1, str, length));
   * @size: Size specifier
   * Return: Number of chars printed
   */
-int print_percent(va_list types, char bufffer[])
+int print_percent(va_list types, char buffer[])
 {
 	UNUSED(types);
 	UNUSED(buffer);
@@ -96,7 +96,7 @@ int print_percent(va_list types, char bufffer[])
 }
 /************PRINT INT ********/
 /**
- * print_intt - Print int
+ * print_int - Print int
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:Calculatr active flags
@@ -116,7 +116,7 @@ int print_int(va_list types, char buffer[], int flags,
 	n = convert_size_number(n, size);
 
 	if (n == 0)
-	buffer[i--] = '0'
+	buffer[i--] = '0';
 buffer[BUFF_SIZE - 1] = '\0';
 num = (unsigned long int)n;
 
@@ -159,7 +159,7 @@ int print_binary(va_list types, char buffer[], int flags,
 	UNUSED(precision);
 	UNUSED(size);
 
-	n = va_ard(types, unsigned int);
+	n = va_arg(types, unsigned int);
 	m = 2147483648;/*(2^31)*/
 	a[0] = n / m;
 	for (i = 1; i < 32; i++)
