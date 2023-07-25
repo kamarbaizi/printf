@@ -5,7 +5,7 @@
  * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags: Calculate active flags
- * @wodth: get width
+ * @width: get width
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of chars printed
@@ -15,6 +15,7 @@ int print_pointer(va_list types, char buffer[], int flags,
 {
 	char extra_c = 0, padd = '';
 	int ind = BUFF_SIZE - 2, length = 2, padd_start = 1;/*length=2 for '0x'*/
+
 	unsigned long num _addrs;
 	char map_to[] = "0123456789abcdef";
 	void *addrs = va_arg(types, void *);
@@ -125,6 +126,7 @@ for (i = 0; str[i]; i++)
 	for (i = i - 1; i >= 0; i--)
 {
 	char z = str[i];
+
 	write(1, &z, 1);
 	count++;
 }
