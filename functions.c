@@ -172,7 +172,9 @@ for (i = 0; sum = 0, count = 0; i < 32; i++)
 	sum += a[i];
 	if (sum || i == 31)
 {
+
 	char z = '0' + a[i];
+
 	write(1, &z, 1);
 	count++;
 }
