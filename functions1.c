@@ -56,6 +56,7 @@ while (num > 0)
 buffer[i--] = (num % 8) + '0';
 num /= 8;
 }
+
 if (flags & F_HASH && init_num != 0)
 buffer[i--] = '0';
 i++;
