@@ -51,7 +51,8 @@ int print_string(va_list types, char buffer[], int flags,
 		length++;
 if (precision >= 0 && precision < length)
 	length = precision;
-if (width > length)
+if (width > length
+{
 	if (flags & F_MINUS)
 {
 
@@ -179,10 +180,5 @@ for (i = 0; sum = 0, count = 0; i < 32; i++)
 }
 }
 	return (count);
-}
-
-}
-}
-
 }
 
