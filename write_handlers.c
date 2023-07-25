@@ -59,7 +59,7 @@ if ((flags & F_ZERO) && !(flags & F_MINUS))
 padd = '0';
 if (is_negative)
 extra_ch = '-';
-else if (flags & F_Plus)
+else if (flags & F_PLUS)
 extra_ch = '+';
 else if (flags & F_SPACE)
 extra_ch = ' ';
