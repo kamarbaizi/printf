@@ -68,7 +68,7 @@ else
 		write(1, " ", 1);
 	write(1, &str[0], length);
 	return (width);
-
+}
 }
 return (write(1, str, length));
 }
